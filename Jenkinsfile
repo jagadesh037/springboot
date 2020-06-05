@@ -8,7 +8,9 @@ pipeline {
 			
 		stage('Stage 1 : Pre-check Python is installed or not') {
 			steps {
-				bat catalina.bat start                       
-            }
-        }
+				bat catalina.bat start       
+			}
+		}
+         }
+}
 
