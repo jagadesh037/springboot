@@ -1,7 +1,7 @@
 pipeline {
     agent any
     tools { 
-        maven 'tomcat' 
+        Tomcat8 'Tomcat8' 
         jdk 'jdk8' 
     }
     stages {
