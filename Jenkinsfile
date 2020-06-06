@@ -65,8 +65,8 @@ pipeline {
      * some of the supported tools - maven, jdk, gradle
      */
     tools {
-        jdk 'jdk1.7'
-        maven 'mvn3.5.0'
+        bat jdk 'jdk1.7'
+        bat maven 'mvn3.5.0'
     }
 
     /**
@@ -267,7 +267,7 @@ pipeline {
         stage('Collect Reports') {
             steps {
                 echo "Reports directory: ${workspace}/target/view"
-                zip dir: "${workspace}/target", zipFile: "$reportZipFile" // Create a zip file of content in the workspace
+                bat zip dir: "${workspace}/target", zipFile: "$reportZipFile" // Create a zip file of content in the workspace
             }
         }
 
